@@ -8,7 +8,7 @@
   display: inline-block;
   width: 2.4rem;
   height: 2.4rem;
-  background-image: url('/assets/img/ic-kr.png');
+  background-image: url('./assets/img/ic-kr.png');
   background-size: cover;
 }
 
@@ -16,7 +16,7 @@
   display: inline-block;
   width: 2.4rem;
   height: 2.4rem;
-  background-image: url('/assets/img/ic-cn.png');
+  background-image: url('./assets/img/ic-cn.png');
   background-size: cover;
 }
 
@@ -24,7 +24,7 @@
     display: inline-block;
     width: 12.5rem;
     height: 3.8rem;
-    background-image: url('/assets/img/logo-white.png');
+    background-image: url('./assets/img/logo-white.png');
     background-size: cover;
 }
 

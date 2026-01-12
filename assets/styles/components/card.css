@@ -1,0 +1,6 @@
+/* card.css */
+.card { background: #fff; border-radius: var(--radius-sm); box-shadow: 0 1px 4px rgba(16,24,40,0.06); overflow: hidden; }
+.card__image { width: 100%; height: auto; display: block; }
+.card__body { padding: 1rem; }
+.card__title { margin-bottom: 0.5rem; font-size: 1.125rem; }
+.card__desc { color: var(--color-muted); font-size: 0.95rem; }

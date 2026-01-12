@@ -1,0 +1,109 @@
+/* button.css */
+.btn { display:inline-block; padding:0.5rem 0.9rem; border-radius:var(--radius-sm); font-weight:600; cursor:pointer; text-align:center; }
+.btn:active { transform: translateY(1px); }
+.btn--primary { background: var(--color-primary); color: #fff; }
+.btn--secondary { background: transparent; border: 1px solid rgba(0,0,0,0.08); color: var(--color-text); }
+
+.ic-kr {
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url('/assets/img/ic-kr.png');
+  background-size: cover;
+}
+
+.ic-cn {
+  display: inline-block;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url('/assets/img/ic-cn.png');
+  background-size: cover;
+}
+
+.logo-w {
+    display: inline-block;
+    width: 12.5rem;
+    height: 3.8rem;
+    background-image: url('/assets/img/logo-white.png');
+    background-size: cover;
+}
+
+/* Tab Button */
+.tab-buttons {
+  display: flex;
+  gap: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.tab-buttons .tab-button {
+  position: relative;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.8rem;
+  cursor: pointer;
+  /* height: 3.8rem; */
+  border-radius: 3.8rem;
+  /* transition: all 0.3s ease; */
+  overflow: hidden;
+}
+
+.tab-buttons .tab-button:not(.active) {
+    background: conic-gradient(
+        from 0deg,
+        #444444,
+        #3d3d3d,
+        #444444
+    );
+}
+
+/* Active 탭 - 회전하는 그래디언트 테두리 */
+.tab-buttons .tab-button {
+  position: relative;
+  background: #000;
+  /* border: 2px solid transparent; */
+  padding: 2px;
+  background-clip: padding-box;
+}
+
+.tab-buttons .tab-button.active::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 300%;
+  height: 300%;
+  background: conic-gradient(
+    from 0deg,
+    #ff8800,
+    #fff,
+    #ff8800
+  );
+  border-radius: 0.6rem;
+  animation: spin 3s linear infinite;
+}
+.tab-buttons .tab-button div {
+  position: relative;
+  z-index: 1;
+  background: #000;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+  height: 3.6rem;
+  border-radius: 3.6rem;
+
+}
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+

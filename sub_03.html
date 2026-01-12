@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="사이트 설명을 작성하세요">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:title" content="My Website">
+    <meta property="og:description" content="사이트 설명을 작성하세요">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:site_name" content="My Website">
+
+    <!-- Kakao Talk specific -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- X (Twitter) Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Website">
+    <meta name="twitter:description" content="사이트 설명을 작성하세요">
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+
+    <!-- css 연결 -->
+    <link rel="stylesheet" href="assets/styles/fonts.css">
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/base.css">
+    <link rel="stylesheet" href="assets/styles/forms.css">
+    <link rel="stylesheet" href="assets/styles/layout.css">
+    <link rel="stylesheet" href="assets/styles/components/button.css">
+    <link rel="stylesheet" href="assets/styles/components/card.css">
+    <link rel="stylesheet" href="assets/styles/components/header.css">
+
+    <!-- 제목 -->
+    <title>레이아웃</title>
+</head>
+<body>
+    <div class="app-wrapper">
+        <!-- 헤더 영역 -->
+        <header class="gnb-header header-sticky">
+            <div class="container header-inner">
+                <a class="gnb-logo" href="index.html"><i class="logo-w"></i></a>
+                <nav class="gnb-nav" id="gnbNav">
+                    <a href="./sub_01.html">회사소개</a>
+                    <a href="./sub_02.html">사업소개</a>
+                    <a href="./sub_03.html">홍보센터</a>
+                    <a href="./sub_04.html">고객센터</a>
+                </nav>
+                <div class="gnb-language">
+                    <a href="#"><i class="ic-cn"></i></a>
+                </div>
+                <!-- 햄버거 메뉴 (모바일) -->
+                <button class="gnb-hamburger" id="hamburgerBtn" aria-label="메뉴 토글">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- 주요 콘텐츠가 여기에 들어갑니다 -->
+        <main class="content">
+            <div class="container">
+                <!-- 페이지별 콘텐츠 삽입 위치 -->
+                    <section class="sub-section">
+                        <div class="tab-buttons">
+                            <button class="tab-button active" data-tab="studio"><div>스튜디오</div></button>
+                            <button class="tab-button" data-tab="project"><div>프로젝트</div></button>
+                        </div>
+
+                        <!-- 스튜디오 탭 -->
+                        <div class="tab-content active" data-tab="studio">
+                            <div class="sub-tit">
+                                <h1>스튜디오</h1>
+                            </div>
+                            <div class="studio-content">
+                                <div class="studio-item">
+                                    <div class="studio-wrapper">
+                                        <div class="studio-text">
+                                            <h3>Meteo Spark | 메테오 스파크</h3>
+                                            <p>메테오 스파크는 메테오에스가 운영하는 소랑 인상·구조 디자인 스튜디오입니다.<br>
+                                            전시와 프로모션에서 사용되는 스티커, 홍보물 등 작은 디자인 아이템을<br>
+                                            네이버 스토어를 통해 가볍게 선보이는 메테오에스의 실험적인 디자인 라인입니다.</p>
+                                        </div>
+                                        <div class="studio-image">
+                                            <img src="./assets/img/meteor_spark.png" alt="Meteo Spark">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 프로젝트 탭 -->
+                        <div class="tab-content" data-tab="project">
+                            <div class="sub-tit">
+                                <h1>프로젝트</h1>
+                            </div>
+                            <div class="projects-list">
+                                <div class="project-item">
+                                    <h4>예) 2025 ○○팝업 | 청주현대커넥트</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+            </div>
+        </main>
+
+        <!-- 푸터 영역 -->
+        <footer class="footer">
+            <div class="container footer-inner">
+                <div class="footer-logo"><i class="logo-w"></i></div>
+                <!-- <nav class="footer-info">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">고객지원</a>
+                </nav> -->
+                <div class="footer-txt">충북 청주시 상당구 대성로 172, 2F-2 / 043-000-0000</div>
+                <div class="footer-txt">&copy; 2025. (유)메테오에스. ALL Rights Reserved.</div>
+                <div class="footer-txt">사업자 번호 : 259-88-03494</div>
+            </div>
+        </footer>
+    </div>
+    
+    
+    <!-- 전역 팝업/모달 영역 -->
+    <div id="modals" class="modals">
+        
+    </div>
+
+    <!-- 스크립트 -->
+    <script>
+        // 햄버거 메뉴 토글
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const gnbNav = document.getElementById('gnbNav');
+
+        if (hamburgerBtn) {
+            hamburgerBtn.addEventListener('click', () => {
+                gnbNav.classList.toggle('active');
+                hamburgerBtn.classList.toggle('active');
+            });
+
+            // 메뉴 링크 클릭 시 닫기
+            gnbNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    gnbNav.classList.remove('active');
+                    hamburgerBtn.classList.remove('active');
+                });
+            });
+        }
+
+        // 탭 버튼 토글
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.getAttribute('data-tab');
+
+                // 모든 탭 버튼에서 active 제거
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                // 모든 탭 콘텐츠 숨김
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                // 클릭한 버튼에 active 추가
+                button.classList.add('active');
+                // 해당 콘텐츠 표시
+                document.querySelector(`.tab-content[data-tab="${tabName}"]`).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
